@@ -1,0 +1,184 @@
+1.Write a Python program to demonstrate basic data type in python
+>>> x = 20 #int
+>>> print(x)
+20
+>>> print(type(x))
+<class 'int'>
+>>> x = 20.5 #float
+>>> print(x)
+20.5
+>>> print(type(x))
+<class 'float'>
+>>> x = 1j #complex
+>>> print(x)
+1j
+>>> print(type(x))
+<class 'complex'>
+>>> x = "ACYTECH.COM" #String
+>>> print(x)
+ACYTECH.COM
+>>> print(type(x))
+<class 'str'>
+>>> x = ["ACT", "TECH", "COMPANY"] #list
+>>> print(x)
+['ACT', 'TECH', 'COMPANY']
+>>> print(type(x))
+<class 'list'>
+>>> x = ("ACT", "TECH", "COMPANY") #tuple
+>>> print(x)
+('ACT', 'TECH', 'COMPANY')
+>>> print(type(x))<class 'tuple'>
+>>> x = {"name" : "anu", "age" : 36} #dict
+>>> print(x)
+{'name': 'anu', 'age': 36}
+>>> print(type(x))
+<class 'dict'>
+>>> x = True #bool
+>>> print(x)
+True
+>>> print(type(x))
+<class 'bool'>
+>>> x = b"Hello" #bytes
+>>> print(x)
+b'Hello'
+>>> print(type(x))
+<class 'bytes'>
+>>> x = {"APPLE", "ORGANGE", "BANANA"} #set
+>>> print(x)
+{'ORGANGE', 'BANANA', 'APPLE'}
+>>> print(type(x))
+<class 'set'>
+>>> x=frozenset({"APPLE", "ORGANGE", "BANANA"})#frozenset
+>>> print(x)
+frozenset({'ORGANGE', 'BANANA', 'APPLE'})
+>>> print(type(x))
+<class 'frozenset'>
+
+2. Write a Python program to do arithmetical operations
+
+
+num1 =input('Enter the   number ')
+num2 =input('Enter the second number')
+sum = float(num1) + float(num2)
+min = float(num1) - float(num2)
+mix = float(num1) * float(num2)
+div= float(num1) / float(num2)
+divf= float(num1) // float(num2)
+modul= float(num1) % float(num2)
+expo= float(num1) ** float(num2)
+print("the sum of {0} and {1} is {2}".format( num1,num2,sum))
+print("the min of {0} and {1} is {2}".format( num1,num2,min))
+print("the mix of {0} and {1} is {2}".format( num1,num2,mix))
+print("the div of {0} and {1} is {2}".format( num1,num2,div))
+print("the divf of {0} and {1} is {2}".format( num1,num2,divf))
+print("the modul of {0} and {1} is {2}".format( num1,num2,modul))
+print("the expo of {0} and {1} is {2}".format( num1,num2,expo))
+
+
+
+3.Write a Python program to find area of triangle
+
+
+a=float(input("Enter a number"))
+b=float(input("Enter b number"))
+c=float(input("Enter c number"))
+s=(a+b+c)/2
+area=(s*(s-a)*(s-b)*(s-c))**0.5
+print("The area of the triangle is %0.2f" %area)
+
+
+4. Write a Python program to solve quadratic equation
+
+
+import math
+a = int(input('Enter a: '))
+b = int(input('Enter b: '))
+c = int(input('Enter c: '))
+def findRoots(a, b, c):
+    
+    dis_form = b * b - 4 * a * c
+    sqrt_val = math.sqrt(abs(dis_form))   
+    if dis_form > 0:
+        print(" real and different roots ")
+        print((-b + sqrt_val) / (2 * a))
+        print((-b - sqrt_val) / (2 * a))
+    elif dis_form == 0:
+        print(" real and same roots")
+        print(-b / (2 * a))
+    else:
+        print("Complex Roots")
+        print(-b / (2 * a), "+ i", sqrt_val)
+        print(-b / (2 * a), "- i", sqrt_val)
+
+if a == 0:
+     print("Input correct quadratic equation")
+else:
+     findRoots(a, b, c)
+
+
+5. Write a Python program to swap two variables
+
+
+P = int( input("Enter value for P: "))
+Q = int( input("Enter value for Q: "))
+
+temp_1 = P
+P = Q
+Q = temp_1
+
+6.Write a Python program to generate a random number
+
+
+import random
+rand_list = []
+for i in range(0,10):
+ n = random.randint(1,50)
+ rand_list.append(n)
+ print(rand_list)
+
+
+7.Write a Python program to convert kilometres to miles
+
+
+def kilometre_1():
+    kmeter = float(input("Enter the speed of car in Kilometre as a unit: "))
+    conversion_ratio_1 = 0.621371
+    miles_1 = kmeter * conversion_ratio_1
+    print("The speed value of car in Miles: ", miles_1)
+
+kilometre_1()
+
+8.Write a Python program to convert Celsius to Fahrenheit
+
+
+celsius_1 = float(input("Temperature value in degree Celsius: " ))
+Fahrenheit_1 = (celsius_1 * 1.8) + 32
+
+print('The %.2f degree Celsius is equal to: %.2f Fahrenheit'%(celsius_1, Fahrenheit_1))
+celsius_2 = float (input("Temperature value in degree Celsius: " ))
+Fahrenheit_2 = (celsius_2 * 9/5) + 32
+
+print ('The %.2f degree Celsius is equal to: %.2f Fahrenheit'%(celsius_2, Fahrenheit_2))
+
+
+9.Write a Python program to display calendar
+
+
+
+import calendar
+yy = int(input("Enter year: "))
+mm = int(input("Enter month: "))
+print(calendar.month(yy, mm))
+
+
+10.Write a Python program to Check if a Number is Positive, Negative or Zero
+
+num = float(input("Input a number: "))
+if num > 0:
+ print("It is positive number")
+elif num == 0:
+ print("It is Zero")
+else:
+ print("It is a negative number")
+
+
